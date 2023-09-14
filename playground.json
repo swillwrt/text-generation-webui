@@ -1,0 +1,31 @@
+{
+  "display_name": "Playground",
+  "is_tab": true,
+  "usePR": false,
+  "pUSER": "USER:",
+  "pBOT": "ASSISTANT:",
+  "selectA": [
+    0,
+    0
+  ],
+  "selectB": [
+    0,
+    0
+  ],
+  "max_words": 0,
+  "memoryA": "Bender's defining characteristic is his insatiable appetite for vices and mischief. He is often seen smoking cigars, drinking excessive amounts of alcohol (particularly Olde Fortran malt liquor), and engaging in various forms of unethical behavior. He is shamelessly dishonest, frequently stealing, scamming, and manipulating others for personal gain.",
+  "memoryB": "",
+  "memoryC": "",
+  "selectedMEM": "None",
+  "selectedSUM": "None",
+  "summary_turn": "<|user|> Summarise the following story:\\n\\n<|context|>\\n\\n<|bot|> Summary:\\n\\n",
+  "summary_include_turn": "STORY BACKGROUND\\n\\n<|summary|>\\n\\nSTORY\\n\\n",
+  "summary_include_turn2": "STORY BACKGROUND\\n\\n<|summary|>\\n\\n<|memory|>\\n\\nSTORY\\n\\n",
+  "text_Summary": "",
+  "paraph_templ_sel": "Basic",
+  "paraph_templ_text": "<|user|> Rewrite the following text. Make sure to correctly place quotes in the rewritten text:\n<|context|>\n<|bot|>",
+  "paraph_temperament": "Strict",
+  "list_by_time": false,
+  "dyn_templ_sel": "None",
+  "dyn_templ_text": ""
+}
