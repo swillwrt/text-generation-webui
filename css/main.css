@@ -91,7 +91,7 @@ div.svelte-15lo0d8 > *, div.svelte-15lo0d8 > .form > * {
 
 .header_bar {
     background-color: #f7f7f7;
-    margin-bottom: 20px;
+    margin-bottom: 19px;
     display: inline !important;
     overflow-x: scroll;
 }
@@ -146,6 +146,14 @@ div.svelte-15lo0d8 > *, div.svelte-15lo0d8 > .form > * {
 
     div .default-token-counter {
         top: calc( 0.5 * (100dvh - 245px) ) !important;
+    }
+
+    .transparent-substring {
+        display: none;
+    }
+
+    .hover-menu {
+        min-width: 250px !important;
     }
 }
 
@@ -277,6 +285,10 @@ div.svelte-362y77>*, div.svelte-362y77>.form>* {
     width: 100%;
 }
 
+#chat-tab button#Generate, #chat-tab button#stop {
+    width: 89.3438px !important;
+}
+
 #chat-tab button, #notebook-tab button, #default-tab button {
     min-width: 0 !important;
 }
@@ -289,15 +301,12 @@ div.svelte-362y77>*, div.svelte-362y77>.form>* {
 
 @media screen and (max-width: 688px) {
     #chat-tab {
-        padding: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
     }
 
     .chat-parent {
-        height: calc(100dvh - 262px) !important;
-    }
-
-    .bigchat {
-        height: calc(100dvh - 180px) !important;
+        height: calc(100dvh - 171px) !important;
     }
 }
 
@@ -312,16 +321,11 @@ div.svelte-362y77>*, div.svelte-362y77>.form>* {
     flex-direction: column;
     word-break: break-word;
     overflow-wrap: anywhere;
-    padding-top: 6px;
 }
 
 .chat-parent {
-    height: calc(100dvh - 272px);
+    height: calc(100dvh - 181px);
     overflow: auto !important;
-}
-
-.bigchat {
-    height: calc(100dvh - 200px);
 }
 
 .chat > .messages {
@@ -367,7 +371,7 @@ div.svelte-362y77>*, div.svelte-362y77>.form>* {
 #chat-input {
     padding: 0;
     padding-top: 18px;
-    background: var(--background-fill-primary);
+    background: transparent;
     border: none;
 }
 
@@ -410,8 +414,10 @@ div.svelte-362y77>*, div.svelte-362y77>.form>* {
 
 #show-controls {
     position: absolute;
-    background-color: transparent;
-    left: calc(100% - 180px);
+    left: calc(100% - 179px);
+    height: 100%;
+    background-color: var(--background-fill-primary);
+    border: 0px;
 }
 
 #typing-container {
@@ -467,4 +473,35 @@ div.svelte-362y77>*, div.svelte-362y77>.form>* {
 
 #chat-tab .generating {
   display: none !important;
+}
+
+.hover-element {
+  position: relative;
+  font-size: 24px;
+}
+
+.hover-menu {
+  display: none;
+  position: absolute;
+  bottom: 80%;
+  left: 0;
+  background-color: var(--background-fill-secondary);
+  z-index: 10000;
+  min-width: 330px;
+  flex-direction: column;
+}
+
+.hover-menu button {
+  width: 100%;
+  background: transparent !important;
+  border-radius: 0px !important;
+  justify-content: left;
+}
+
+.hover-menu button:hover {
+  background: var(--button-secondary-background-fill-hover) !important;
+}
+
+.transparent-substring {
+  opacity: 0.333;
 }
