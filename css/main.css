@@ -306,7 +306,7 @@ div.svelte-362y77>*, div.svelte-362y77>.form>* {
     }
 
     .chat-parent {
-        height: calc(100dvh - 171px) !important;
+        height: calc(100dvh - 179px) !important;
     }
 }
 
@@ -414,10 +414,16 @@ div.svelte-362y77>*, div.svelte-362y77>.form>* {
 
 #show-controls {
     position: absolute;
-    left: calc(100% - 179px);
     height: 100%;
     background-color: var(--background-fill-primary);
     border: 0px;
+    border-radius: 0px;
+}
+
+#show-controls label {
+    z-index: 1000;
+    position: absolute;
+    left: calc(100% - 168px);
 }
 
 #typing-container {
@@ -486,6 +492,7 @@ div.svelte-362y77>*, div.svelte-362y77>.form>* {
   bottom: 80%;
   left: 0;
   background-color: var(--background-fill-secondary);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   z-index: 10000;
   min-width: 330px;
   flex-direction: column;
@@ -496,6 +503,15 @@ div.svelte-362y77>*, div.svelte-362y77>.form>* {
   background: transparent !important;
   border-radius: 0px !important;
   justify-content: left;
+  margin: 0 !important;
+}
+
+.hover-menu button:not(#clear-history-confirm) {
+  border-bottom: 0 !important;
+}
+
+.hover-menu button:not(#clear-history-confirm):last-child {
+  border-bottom: var(--button-border-width) solid var(--button-secondary-border-color) !important;
 }
 
 .hover-menu button:hover {
