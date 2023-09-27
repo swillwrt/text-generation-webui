@@ -44,6 +44,7 @@ else:
 def list_model_elements():
     elements = [
         'loader',
+        'filter_by_loader',
         'cpu_memory',
         'auto_devices',
         'disk',
@@ -51,6 +52,7 @@ def list_model_elements():
         'bf16',
         'load_in_8bit',
         'trust_remote_code',
+        'use_fast',
         'load_in_4bit',
         'compute_dtype',
         'quant_type',
@@ -114,10 +116,12 @@ def list_interface_input_elements():
         'mirostat_mode',
         'mirostat_tau',
         'mirostat_eta',
+        'grammar_string',
         'negative_prompt',
         'guidance_scale',
         'add_bos_token',
         'ban_eos_token',
+        'custom_token_bans',
         'truncation_length',
         'custom_stopping_strings',
         'skip_special_tokens',
@@ -215,7 +219,7 @@ class ToolButton(gr.Button, gr.components.IOComponent):
         return "button"
 
 
-def create_refresh_button(refresh_component, refresh_method, refreshed_args, elem_class):
+def create_refresh_button(refresh_component, refresh_method, refreshed_args, elem_class, interactive=True):
     """
     Copied from https://github.com/AUTOMATIC1111/stable-diffusion-webui
     """
@@ -228,7 +232,7 @@ def create_refresh_button(refresh_component, refresh_method, refreshed_args, ele
 
         return gr.update(**(args or {}))
 
-    refresh_button = ToolButton(value=refresh_symbol, elem_classes=elem_class)
+    refresh_button = ToolButton(value=refresh_symbol, elem_classes=elem_class, interactive=interactive)
     refresh_button.click(
         fn=refresh,
         inputs=[],

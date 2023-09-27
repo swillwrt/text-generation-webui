@@ -7,7 +7,6 @@ from pathlib import Path
 import markdown
 from PIL import Image, ImageOps
 
-from modules.logging_colors import logger
 from modules.utils import get_available_chat_styles
 
 # This is to store the paths to the thumbnails of the profile pictures
@@ -71,10 +70,9 @@ def convert_to_markdown(string):
         else:
             result += '\n\n'
 
-    if is_code:
-        result = result + '```'  # Unfinished code block
-
     result = result.strip()
+    if is_code:
+        result += '\n```'  # Unfinished code block
 
     # Unfinished list, like "\n1.". A |delete| string is added and then
     # removed to force a <ol> or <ul> to be generated instead of a <p>.
