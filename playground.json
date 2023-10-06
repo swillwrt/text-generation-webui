@@ -2,8 +2,8 @@
   "display_name": "Playground",
   "is_tab": true,
   "usePR": false,
-  "pUSER": "USER:",
-  "pBOT": "ASSISTANT:",
+  "pUSER": "### Instruction:",
+  "pBOT": "### Response:",
   "selectA": [
     0,
     0
@@ -13,12 +13,12 @@
     0
   ],
   "max_words": 0,
-  "memoryA": "Bender's defining characteristic is his insatiable appetite for vices and mischief. He is often seen smoking cigars, drinking excessive amounts of alcohol (particularly Olde Fortran malt liquor), and engaging in various forms of unethical behavior. He is shamelessly dishonest, frequently stealing, scamming, and manipulating others for personal gain.",
+  "memoryA": "\"Taboo Island\" is a narrator, and not a human character. Give unique characters a name, introduce them with a physical description using erotic language, and maintain their personality. Describe the slow change of each character as they are affected by the virus. As much as possible, reduce repetition between posts.",
   "memoryB": "",
   "memoryC": "",
   "selectedMEM": "None",
   "selectedSUM": "None",
-  "summary_turn": "<|user|> Summarise the following story:\\n\\n<|context|>\\n\\n<|bot|> Summary:\\n\\n",
+  "summary_turn": "<|user|> Summarie the following story:\\n\\n<|context|>\\n\\n<|bot|> Summary:\\n\\n",
   "summary_include_turn": "STORY BACKGROUND\\n\\n<|summary|>\\n\\nSTORY\\n\\n",
   "summary_include_turn2": "STORY BACKGROUND\\n\\n<|summary|>\\n\\n<|memory|>\\n\\nSTORY\\n\\n",
   "text_Summary": "",
@@ -27,5 +27,6 @@
   "paraph_temperament": "Strict",
   "list_by_time": false,
   "dyn_templ_sel": "None",
-  "dyn_templ_text": ""
+  "dyn_templ_text": "",
+  "combination_type": "linear"
 }

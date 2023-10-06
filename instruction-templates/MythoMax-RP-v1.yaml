@@ -1,0 +1,4 @@
+user: '### Instruction:'
+bot: '### Response:'
+turn_template: <|user|>\n<|user-message|>\n\n<|bot|>\n<|bot-message|>\n\n
+context: "Write {{user}}'s next reply in a chat between {{user}} and {{char}}. Write a single reply only. Never generate dialogue or actions for {{user}}.\n\n"
